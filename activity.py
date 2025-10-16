@@ -28,6 +28,15 @@ cv2.circle(image1,(centerx1,centery1),50,(233,67,90),-1)
 
 cv2.line(image1,(centerx,centery),(centerx1,centery1),(22,222,22),5)
 
+arrow=(width-50,20)
+arrowend=(width-50,height-20)
+cv2.arrowedLine(image1,arrow,arrowend,(33,45,22),4,tipLength=0.05)
+cv2.arrowedLine(image1,arrowend,arrow,(33,45,22),4,tipLength=0.05)
+
+font=cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(image1,"height",(arrow[0]-150,(arrowend[1]+arrow[1])//2),font,0.8,(255,255,255),2,cv2.LINE_AA)
+
+
 
 
 plt.figure(figsize=(12,8))
